@@ -2,17 +2,17 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: swiggy
-  name: swiggy-deploy
+    app: train
+  name: train-deploy
 spec:
   replicas: 6
   selector:
     matchLabels:
-      app: swiggy
+      app: train
   template:
     metadata:
       labels:
-        app: swiggy
+        app: train
     spec:
       containers:
       - name: cont1
@@ -27,7 +27,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: swiggy
+    app: train
   ports:
     - port: 80
       targetPort: 80
