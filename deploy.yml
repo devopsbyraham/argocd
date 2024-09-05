@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: train
-  name: train-deploy
+    app: movie
+  name: movie-deploy
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: train
+      app: movie
   template:
     metadata:
       labels:
-        app: train
+        app: movie
     spec:
       containers:
       - name: cont1
-        image: siraj321/paytmrecharge:latest
+        image: venky98765/movies:latest
         ports:
           - containerPort: 80
 ---
@@ -27,7 +27,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: train
+    app: movie
   ports:
     - port: 80
       targetPort: 80
