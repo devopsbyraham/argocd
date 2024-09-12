@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: cont1
-        image: siraj321/paytmtrain:latest
+        image: siraj321/paytmmovies:latest
         ports:
           - containerPort: 80
 ---
