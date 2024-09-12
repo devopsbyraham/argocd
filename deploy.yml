@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: train
-  name: train-deploy
+  name: movies-deploy
 spec:
   replicas: 4
   selector:
