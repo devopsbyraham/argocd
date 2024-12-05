@@ -2,13 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: train
-  name: movies-deploy
+    app: zomato
+  name: zomato-deploy
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: train
+      app: zomato
   template:
     metadata:
       labels:
@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: cont1
-        image: siraj321/paytmtrain:latest
+        image: rahamshaik/zomatoproject:myzomatoimage
+
         ports:
           - containerPort: 80
 ---
@@ -27,7 +28,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: train
+    app: zomato
   ports:
     - port: 80
       targetPort: 80
