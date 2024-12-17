@@ -2,22 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: zomato
-  name: zomato-deploy
+    app: swiggy
+  name: swiggy-deploy
 spec:
-  replicas: 4
+  replicas: 3
   selector:
     matchLabels:
-      app: zomato
+      app: swiggy
   template:
     metadata:
       labels:
-        app: zomato
+        app: swiggy
     spec:
       containers:
       - name: cont1
-        image: rahamshaik/zomatoproject:myzomatoimage
-
+        image: rahamshaik/trainservice:latest
         ports:
           - containerPort: 80
 ---
@@ -26,9 +25,8 @@ kind: Service
 metadata:
   name: abc
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
-    app: zomato
+    app: swiggy
   ports:
     - port: 80
-      targetPort: 80
