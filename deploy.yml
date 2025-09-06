@@ -29,4 +29,4 @@ spec:
   selector:
     app: zomato
   ports:
-    - port: 80
+    - port: 3000
