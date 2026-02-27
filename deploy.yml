@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: cont1
-        image: rahamshaik/gabrimage:latest
+        image: rahamshaik/mydockerprojectzomato:myzomatoimage
+
         ports:
           - containerPort: 3000
 ---
