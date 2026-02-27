@@ -5,7 +5,7 @@ metadata:
     app: zomato
   name: zomato-deploy
 spec:
-  replicas: 10
+  replicas: 3
   selector:
     matchLabels:
       app: zomato
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: cont1
-        image: rahamshaik/zomatoproject:myzomatoimage
+        image: rahamshaik/gabrimage:latest
         ports:
           - containerPort: 3000
 ---
