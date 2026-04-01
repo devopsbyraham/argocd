@@ -16,10 +16,9 @@ spec:
     spec:
       containers:
       - name: cont1
-        image: rahamshaik/mydockerprojectzomato:myzomatoimage
-
+        image: rahamshaik/image:v1
         ports:
-          - containerPort: 3000
+          - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
@@ -30,5 +29,5 @@ spec:
   selector:
     app: zomato
   ports:
-    - port: 3000
+    - port: 8080
       nodePort: 31111
