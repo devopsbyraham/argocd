@@ -5,7 +5,7 @@ metadata:
     app: zomato
   name: zomato-deploy
 spec:
-  replicas: 5
+  replicas: 7
   selector:
     matchLabels:
       app: zomato
