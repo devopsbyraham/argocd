@@ -1,9 +1,0 @@
-apiVersion: v1
-data:
-  password: test123
-  user: raham
-kind: ConfigMap
-metadata:
-  name: raham
-  namespace: raham
-
