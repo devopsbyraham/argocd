@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: abc
+  namespace: raham
 spec:
   type: NodePort
   selector:
