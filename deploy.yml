@@ -4,6 +4,7 @@ metadata:
   labels:
     app: zomato
   name: zomato-deploy
+  namespace: raham
 spec:
   replicas: 10
   selector:
