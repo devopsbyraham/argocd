@@ -26,7 +26,7 @@ kind: Service
 metadata:
   name: zomatoservice
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: zomato
   ports:
