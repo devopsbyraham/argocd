@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: cont1
-        image: rahamshaik/image:v1
+        image: rahamshaik/image:v2
         ports:
           - containerPort: 8080
 ---
