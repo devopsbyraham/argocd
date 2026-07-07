@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: cont1
-        image: rahamshaik/image:v2
+        image: rahamshaik/netflix-image:latest
         ports:
           - containerPort: 8080
 ---
