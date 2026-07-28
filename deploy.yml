@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: cont1
-        image: rahamshaik/zomatoimage:latest
+        image: rahamshaik/nodejsimage:d4f28fff814f79e62fc3fcb557716df9855154ec
         ports:
           - containerPort: 3000
 
