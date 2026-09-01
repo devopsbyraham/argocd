@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: dev-quota
+  namespace: default
+spec:
+  hard:
+    pods: "10"
+    limits.cpu: "1"
+    limits.memory: 1Gi
