@@ -5,7 +5,7 @@ metadata:
     app: zomato
   name: zomato-deploy
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       app: zomato
@@ -19,4 +19,9 @@ spec:
         image: rahamshaik/nodejsimage:d4f28fff814f79e62fc3fcb557716df9855154ec
         ports:
           - containerPort: 3000
+        resources:
+           limits:
+              cpu: "0.1"
+              memory: 100Mi
+
 
