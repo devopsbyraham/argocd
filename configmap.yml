@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dbcreds
+data:
+  user: "raham"
+  password: "test123"
