@@ -3,8 +3,10 @@ kind: Service
 metadata:
   name: service1
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: zomato
   ports:
     - port: 3000
+      targetPort: 3000
+      nodePort: 30080
